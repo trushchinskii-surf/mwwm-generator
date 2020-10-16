@@ -20,8 +20,20 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello World from mwwm-generator!');
 	});
 
+	let widgetDisposable = vscode.commands.registerCommand('mwwm-generator.create-widget', (...args: any[]) => {
+		vscode.window.showInformationMessage('Create widget!');
+		// TODO notification doesn't shown
+	});
+
+	let screenDisposable = vscode.commands.registerCommand('mwwm-generator.create-screen', (...args: any[]) => {
+		vscode.window.showInformationMessage('Create screen!');
+		// TODO notification doesn't shown
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(widgetDisposable);
+	context.subscriptions.push(screenDisposable);
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

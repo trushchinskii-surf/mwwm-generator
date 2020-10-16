@@ -18,8 +18,30 @@
 			{
 				"command": "mwwm-generator.helloWorld",
 				"title": "Hello World"
+			},
+			{
+				"command": "mwwm-generator.create-widget",
+				"title": "Create Mwwm-widget"
+			},
+			{
+				"command": "mwwm-generator.create-screen",
+				"title": "Create Mwwm-screen"
 			}
-		]
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "mwwm-generator.create-widget",
+					"group": "creating",
+					"when": "true"
+				},
+				{
+					"command": "mwwm-generator.create-screen",
+					"group": "creating",
+					"when": "true"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
